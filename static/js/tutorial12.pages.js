@@ -57,7 +57,7 @@ tutorial12.pages.list =
          '<li>Defining a Function (<code>step2</code>)</li>'+
          '<li>Functions without a name: lambda functions(<code>step4</code>)</li>'+
          '<li>A key datastructure: the list (<code>step11</code>)</li>'+
-         '<li>Constructing lists (<code>step16</code>)</li>'+
+         '<li>Constructing lists (<code>step17</code>)</li>'+
          '<li>Manipulating lists (<code>step24</code>)</li>'+
          '</ol>' +
          '<p>Type <code>step2</code> at the <span style="color: purple">&#955;</span> prompt to start the first section of the tutorial.</p>' +
