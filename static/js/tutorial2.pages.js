@@ -71,7 +71,7 @@ tutorial2.pages.list =
             var rexpr = result.expr.replace(/^let\s.+\sin\s+/, "");
             var complied = /True/.test(result.value);            
             var valid = /True|False/.test(result.value);
-            var next_step = "<p>Now compare two different integer values for equality, e.g. <code>1 == 2</code>, and observe that the result is False.</p>";
+            var next_step = "<p>Now compare two different integer values for equality, e.g. <code>1==2</code>, and observe that the result is False.</p>";
             if (valid) {
               if (complied) {
                 return "<p>OK, no surprises so far, you got back the truth value "+result.value+" as expected.</p>"+next_step;
@@ -119,7 +119,7 @@ tutorial2.pages.list =
          trigger:tutorial2.pages.isBool,
           guide:function(result){
 	      tutorial2.continueOnError = true;
-            return "<p>You can apply these operations to other data types. Try comparing two Strings for equality, e.g. <code>\"hello\" == \"hola\"</code>.</p>";
+            return "<p>You can apply these operations to other data types. Try comparing two Strings for equality, e.g. <code>\"hello\"==\"hola\"</code>.</p>";
           }
         },
 
@@ -140,14 +140,14 @@ tutorial2.pages.list =
 		 msg = "<p>Did you forget a double quote \" at the beginning or end of one of your strings?"
 	     }
              tutorial2.continueOnError = false;
-             return   msg + "<p> Now try String inequality <code>\"foo\" /= \"bar\"</code></p>";
+             return   msg + "<p> Now try String inequality <code>\"foo\"/=\"bar\"</code></p>";
          }
         },
 
         {
          trigger:tutorial2.pages.isBool,
           guide:function(result){
-            return "<p>You can apply these operations to other data types. You might also try comparing two Bools directly, e.g. <code>True /= False</code>.</p>";
+            return "<p>You can apply these operations to other data types. You might also try comparing two Bools directly, e.g. <code>True/=False</code>.</p>";
           }
         },
 
@@ -167,7 +167,7 @@ tutorial2.pages.list =
                 msg="<p>So this expression returned "+result.value+", illustrating the use of the equality test operator.</p>";
             } 
             var next_step =
-		  "<p>Now, what happens if you try to compare two values with different types? e.g. <code>True == 1</code>.";
+		  "<p>Now, what happens if you try to compare two values with different types? e.g. <code>True==1</code>.";
 	      tutorial2.continueOnError = true;
             return msg+next_step;
           }
@@ -184,7 +184,7 @@ tutorial2.pages.list =
           guide:function(result){
           tutorial2.continueOnError = false;
           return   "<p>As you can see, this equality test fails:  Haskell cannot compare two values that have <em>different types</em>. The full story is more complex, but for now, we can see that types <em>limit</em> the operations we can apply to particular values.</p>" +
-		  "<p>Haskell supports the standard comparison/relational operators, <, <=, >, >=. Try a simple comparison, e.g. <code>10 &gt; 9</p>";
+		  "<p>Haskell supports the standard comparison/relational operators, <, <=, >, >=. Try a simple comparison, e.g. <code>10&gt;9</p>";
         }
         },
 
@@ -192,7 +192,7 @@ tutorial2.pages.list =
         {
           trigger:tutorial2.pages.isBool,
           guide:function(result){
-          return  "<p>Note that relational operators also work on lists, in a dictionary-order manner (lexicographic). e.g. Try <code>[1,2,3] &lt; [1,2,3,4]</p>";
+          return  "<p>Note that relational operators also work on lists, in a dictionary-order manner (lexicographic). e.g. Try <code>[1,2,3]&lt;[1,2,3,4]</p>";
         }
         },
 
@@ -225,7 +225,7 @@ tutorial2.pages.list =
             var matches = rexpr.match(/^\s*elem\s+([0-9]+) (\[[^\]]*\])/);
 	    var element = matches[1];
             var msg="<p>You see that element " + element + " is " + ((valid&&outcome)?"":" not ") + "part of the list.</p>";
-	    var next_step = msg + "<p>The elem function can be written infix, like an arithmetic operator, by enclosing its name in backquotes ``. Try <code>3 `elem` [1, 2, 3, 4, 5]</code>."
+	    var next_step = msg + "<p>The elem function can be written infix, like an arithmetic operator, by enclosing its name in backquotes ``. Try <code>3 `elem` [1,2,3,4,5]</code>."
             return next_step;
 	      
 	}
